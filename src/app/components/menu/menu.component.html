@@ -1,0 +1,154 @@
+<div id="fondo-menu">
+
+  <nav class="navbar navbar-light bg-light  " id="navbardise">
+    <div class="container-fluid width:   ">
+      <form class="d-flex " style="width: 1000%!important;">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 " style="padding-left: 2em;">
+          <li class="nav-item">
+            <h1 id="titulo"> Z<fa-icon class=" color" [icon]="fapaw"></fa-icon>
+              <fa-icon [icon]="fapaw"></fa-icon>Sh<fa-icon class="color" [icon]="fapaw"></fa-icon>p
+            </h1>
+
+          </li>
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 " style="padding-left: 2em;">
+          <li class="nav-item">
+            <input class="form-control me-2" style="margin-left: 5em; width:20;" type="search" placeholder="Search"
+              aria-label="Search">
+
+          </li>
+
+        </ul>
+        <ul class="navbar-nav me-auto mb-3 mb-lg-0 col col col-lg-4 " style="padding-left: 2em;margin-left: 3em;">
+          <li class="nav-item">
+            <button class="btn btn-outline-success">Buscar</button>
+          </li>
+        </ul>
+
+      </form>
+    </div>
+  </nav>
+  <app-slider></app-slider>
+  <div class="container">
+
+    <div class="row">
+      <div class="col col-lg-12" style="margin-left: 10em;margin-top: 4em;">
+        <h4 class="titulo2">Categorias </h4><select id="select-categoria" style="width: 15em;" (change)="obtenerproductosid()">
+          <option>Seleccione la categoria</option>
+          <option *ngFor="let categoria of categorias; " value="{{categoria.id_categoria}}">
+            {{categoria.nombrecategoria}}
+
+          </option>
+
+        </select>
+
+
+      </div>
+
+
+      <div class="col col-lg-6" style="margin-left: 20em;">
+        
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+  <!-- categorias card dogs  -->
+  <div class="container">
+    <div class="row">
+      <div class="card col col-lg-3 estilo-card" *ngFor="let producto of productobyid"
+        style=" margin-top:2em;width: 18rem;margin-left: 3em;">
+        <img src="{{producto.url}}" class="card-img-top" style=" height: 50%;" alt="...">
+        <div class="card-body" style="text-align: center;">
+          <h5 class="card-title">{{producto.nombre}}</h5>
+          <p class="card-text">{{producto.descripcion}}</p>
+          <p>{{producto.precio}}</p>
+
+          <button id="estilo-buy" class="btn btn-primary" (click)="open(content,producto.id_producto)">
+            <fa-icon [icon]="fashopping"></fa-icon>BUY
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!--modal-->
+
+    <ng-template #content let-modal style="align-items: center;">
+      <div class="modal-header estilo-modal-header">
+        <h4 style="color: white;">
+          <fa-icon [icon]="fapaw"></fa-icon>ZOOSHOP<fa-icon [icon]="fapaw"></fa-icon>
+        </h4>
+
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group col col-lg-12" style="align-items: center;" *ngFor="let pro of productoId;  ">
+            <div class="container">
+              <div class="row" style="align-items: center;text-align: center;">
+                <div class="col col-lg-12">
+                  <h3><label>Producto:</label>{{pro.nombre}}</h3>
+                </div>
+                <div class="col col-lg-12"><img src="{{pro.url}}" class="card-img-top" style=" height: 50%;" alt="...">
+                </div>
+
+              </div>
+              <div class="col col-lg-12" style="align-items: center;text-align: center;">
+                <h4> <label>Precio:$</label>{{pro.precio}}</h4>
+              </div>
+              <div class="col col-lg-12" style="align-items: center;text-align: center;">
+                <h4><label>Descripcion:</label>{{pro.descripcion}}</h4>
+              </div>
+            </div>
+
+            <div class="input-group">
+
+              <div class="input-group-append">
+
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline-dark estiloboton" (click)="guardarCompras(pro.id_producto,pro.descripcion)">
+              <fa-icon [icon]="faout"></fa-icon>Save
+            </button>
+          
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer estilo-modal-header">
+        <!-- <button type="button" class="btn btn-outline-dark estiloboton" (click)="guardarCompras(4,pro.descripcion)">
+          <fa-icon [icon]="faout"></fa-icon>Save
+        </button> -->
+      </div>
+    </ng-template>
+    <!-- 
+<button class="btn btn-lg btn-outline-primary" (click)="close(content)">Launch demo modal</button> -->
+
+    <hr>
+
+    <pre>{{ closeResult }}</pre>
+
+
+
+
+
+
+
+    <!--finaliza-->
+
+
+
+
+
+  </div>
+</div>

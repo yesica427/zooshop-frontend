@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+   
+
+.titulo{
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    color:rgb(117, 177, 64);
+    font-size: 2em;
+    align-items: center;
+    margin-left: 15em;
+    
+  
+    margin-bottom: 1em;
+
+}
+
+
+
+.error{
+    color: red!important;
+}
+
+
+
+#contenido{
+    
+    box-shadow: 10px 30px 60px 10px rgb( green, blue);
+    color : #944429;
+    transition:5s;
+    width: 30em;
+    height: 30em; 
+    align-items: center;
+    margin-left: 19em;
+    margin-top: 5em;
+   
+    background:linear-gradient(50deg, rgba(172, 90, 22, 0.87), rgb(117, 177, 64));
+    background-color: transparent;
+
+    
+}
+
+
+body{
+    background-color: blue;
+}
+
+#fondo-registro{
+    background-color: rgba(0, 204, 255, 0.301);
+    /* width: 200%;
+    height:100em; */
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover !important;
+    background-position: center center !important;
+    padding: 0;
+    vertical-align: middle !important;
+  
+    
+   
+ 
+  
+    background-image: url("https://th.bing.com/th/id/R99c78d4a6a8611e061c59c548251e8c3?rik=DSi%2f41DGj879GQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-p1cxVXDeV0E%2fT9ys8qf2eSI%2fAAAAAAAAfcA%2fhEBn5YzbbK0%2fs1600%2fPerro-Border-Collie_Imagenes-de-Perros-en-HD.jpg&ehk=MOIY6QvYrglAJWSJ%2bipmva2d4kKwy8OTk6TxBG4%2bPmA%3d&risl=&pid=ImgRaw"); */ 
+
+
+}
+
+.colorletra{
+
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    color:white;
+
+}
+
+#estiloboton{
+    background-color:#944429 ;
+    color:white;
+
+}
+
+.tamanioinput{
+    width: 15em!important;
+    align-items: center;
+    margin-left: 8em;
+}
+
+.color-icon{
+    color:#944429 ;
+}

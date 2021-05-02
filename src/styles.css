@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+   
+
+#titulo{
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    color:white;
+    font-size: 5em;
+    
+  
+    margin-bottom: 1em;
+
+}
+.color{
+    color:#944429;
+}

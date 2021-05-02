@@ -1,0 +1,25 @@
+#titulo{
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    color: rgb(117, 177, 64);
+    font-size: 5em;
+    
+  
+    margin-bottom: 1em;
+
+}
+
+.contenido{
+align-items: center;
+text-align: center !important;
+margin-left: 9em;
+}
+
+#fondo{
+
+     background-repeat: no-repeat;
+     /* background-position: center;
+    background-size: cover;  */
+     background-image: url("https://th.bing.com/th/id/R86086782961e6b0c296e58550b6e6af2?rik=1WUefXWmWf0UqA&pid=ImgRaw");
+    
+}

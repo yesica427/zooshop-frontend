@@ -1,0 +1,67 @@
+<body id="fondo-login">
+
+  <h1 id="titulo"> Z<fa-icon class=" color"[icon]="fapaw"></fa-icon><fa-icon [icon]="fapaw"></fa-icon>Sh<fa-icon class="color" [icon]="fapaw"></fa-icon>p</h1>
+
+<div  style="width: 100%!important ;height: 100% !important;" class="col col-lg-12 ">
+  <form       [formGroup]="formularioiniciosesion">
+  <div id="contenido" class="form-group"   style="margin-bottom: 2em;">
+    <div class="card-header card">
+     <h4><fa-icon [icon]="faalt"></fa-icon>Login</h4> 
+    </div>
+  
+    
+  
+    <div class="col col-lg-12 contenido-login" style="margin-top: 1em;" >
+      
+            <label style="margin-right: 4em;margin-top: 3em;"><h3>user</h3></label><input formControlName="usuario" type="text" >
+            <fa-icon class="col col-1" [icon]="facat"></fa-icon>
+
+            <div style="width: 13em;text-align: center;align-items: center;margin-left: 13em;" class="estilo-validacion" *ngIf="usuario.invalid && (usuario.dirty || usuario.touched)" class="alert alert-danger" role="alert">
+             Error,Incorrect user!
+            
+              <span class="error" *ngIf="usuario.errors.required">Error el campo es Obligatorio</span>
+              <span class="error" *ngif="usuario.errors.pattern">Incorrect Email</span>
+            </div> 
+
+    </div>
+    <fa-icon class="col col-1" [icon]="fapaw"></fa-icon>
+  
+  <div class="contenido-login"style="margin-top:1em"> <label class="colorletra" style="margin-right: 1em;"><h3>Password</h3></label><input type="text" formControlName="contrasenia" 
+><fa-icon class="col col-4" [icon]="fadog"></fa-icon>
+ 
+<div style="margin-left: 16em;width: 13em;align-items: center;text-align: center;" class="estilo-validacion" *ngIf="contrasenia.invalid && (contrasenia.dirty || contrasenia.touched)" class="alert alert-danger" role="alert">
+  Error Incorrect password!
+
+  <span class="error" *ngIf="contrasenia.errors.required">Error el campo es Obligatorio</span>
+  <span class="error" *ngIf="contrasenia.errors.pattern">Al Menos un digito y una letra Mayuscula</span>
+  <span class="error" *ngIf="contrasenia.errors.minLength">El tamano minimo es de 8 caracteres</span>
+</div> 
+
+
+
+<div class="col col-12 contenido-login">  <fa-icon class="col col-1" [icon]="fapaw"></fa-icon>
+  <button [disabled]="!formularioiniciosesion.valid" class="btn " id="estilo-boton" style=" margin-top:2em; width: 10em;"  (click)="guardar()"  ><fa-icon [icon]="faopen"></fa-icon> Enter </button>
+  <button  class="btn " id="estilo-boton" style=" margin-top:2em; width: 10em; margin-left: 2em;"  routerLink="/registro"  ><fa-icon [icon]="faopen"></fa-icon> Check In </button>
+</div>
+  
+  </div>
+
+
+</div>
+
+
+<fa-icon class="col col-1" [icon]="fapaw"></fa-icon>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+

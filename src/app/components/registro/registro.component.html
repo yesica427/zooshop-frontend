@@ -1,0 +1,75 @@
+
+
+
+
+<div class="container " id="fondo-registro" style="margin-top: 5em; align-items: center;text-align: center;">
+    <div class="row">
+      <h6 class="titulo" style="align-items: center;"><fa-icon  [icon]="fapaw"></fa-icon>Register <fa-icon [icon]="fapaw"></fa-icon> </h6>
+
+
+        <form  id="contenido" class=" colorletra" style="margin-left: 20em;"  [formGroup]="formularioregistro">
+
+
+
+            <div  style="margin-bottom: 4em;"class="mb-3">
+                <label for="exampleInputEmail1" class="form-label colorletra "><fa-icon class="color-icon" [icon]="fauser"> </fa-icon>Name</label>
+                <input  formControlName="nombre" class="form-control tamanioinput"  aria-describedby="emailHelp">
+
+                <div style="margin-left: 9em;width: 13em;align-items: center;text-align: center;" class="estilo-validacion tamanioinput" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger" role="alert">
+                  Error Incorrect name!
+                
+                  <span class="error" *ngIf="nombre.errors.required">Error el campo es Obligatorio</span>
+                </div> 
+
+
+                
+              </div>
+
+            <div class="mb-3">
+              <label  class="form-label colorletra"><fa-icon class="color-icon" [icon]="faenvelope"></fa-icon>Email address</label>
+              <input  formControlName="correo" class="form-control tamanioinput"  aria-describedby="emailHelp">
+
+              <div style="margin-left: 9em;width: 13em;align-items: center;text-align: center;" class="estilo-validacion tamanioinput" *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="alert alert-danger" role="alert">
+                Error Incorrect Email!
+              
+                <span class="error" *ngIf="correo.errors.required">Error el campo es Obligatorio</span>
+                <span class="error" *ngIf="correo.errors.pattern">Incorrect Email!</span>
+                
+              </div> 
+
+
+
+
+            </div>
+            
+            <div class="mb-3">
+
+              <label for="exampleInputPassword1" class="form-label colorletra"><fa-icon class="color-icon" [icon]="falock"></fa-icon>Password</label>
+              <input type="password " formControlName="contrasenia" class="form-control tamanioinput" id="exampleInputPassword1">
+
+
+              <div style="margin-left: 9em;width: 13em;align-items: center;text-align: center;" class="estilo-validacion tamanioinput" *ngIf="contrasenia.invalid && (contrasenia.dirty || contrasenia.touched)" class="alert alert-danger" role="alert">
+                Error Incorrect password!
+              
+                <span class="error" *ngIf="contrasenia.errors.required">Error el campo es Obligatorio</span>
+                <span class="error" *ngIf="contrasenia.errors.pattern">Al Menos un digito y una letra Mayuscula</span>
+                <span class="error" *ngIf="contrasenia.errors.minLength">El tamano minimo es de 8 caracteres</span>
+              </div> 
+
+
+            </div>
+           
+            <button [disabled]="!formularioregistro.valid" id="estiloboton" class="btn btn-lg "  (click)=guardarUsuario() routerLink="/login">Guardar</button>
+          </form>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
